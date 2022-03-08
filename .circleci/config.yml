@@ -13,7 +13,8 @@ jobs:
           app-dir: ~/app/udagram-frontend
       - run:
           name: Build Frontend
-          command: npm run build
+          command: npm install --save-dev @angular-devkit/build-angular
+            - npm run build
       - aws-cli/install
       - run:
           name: Deploy Frontend
