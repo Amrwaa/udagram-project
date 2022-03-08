@@ -1,4 +1,4 @@
-
+![alt text](https://github.com/Amrwaa/udagram-project/blob/main/documents/github.drawio.png?raw=true)
 
 ## GitHub
 Developers commit and push the code to the GitHub repository which is linked to the CircleCI platform. GitHub triggers the CircleCI platform when code is pushed to the repository.
