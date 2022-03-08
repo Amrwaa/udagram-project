@@ -4,17 +4,16 @@ orbs:
   aws-cli: circleci/aws-cli@2.0.0
 jobs:
   frontend:
-    working_directory: ~/app/udagram-frontend
+    working_directory: ~/main/udagram-frontend
     executor: node/default
     steps:
       - checkout:
-          path: ~/app
+          path: ~/main
       - node/install-packages:
-          app-dir: ~/app/udagram-frontend
+          app-dir: ~/main/udagram-frontend
       - run:
           name: Build Frontend
-          command: npm install --save-dev @angular-devkit/build-angular
-            - npm run build
+          command: npm run build
       - aws-cli/install
       - run:
           name: Deploy Frontend
@@ -24,9 +23,9 @@ jobs:
     executor: node/default
     steps:
       - checkout:
-          path: ~/app
+          path: ~/main
       - node/install-packages:
-          app-dir: ~/app/udagram-api
+          app-dir: ~/main/udagram-api
       - run:
           name: Build and Archive Server
           command: |-
